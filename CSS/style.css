@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: black;
+    --secondary-color: red;
+}
+
+/* CSS Reset */
+html, body, div, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat";
+    background-color: rgb(255, 255, 255);
+}
+
+/* Additional Reset Styles */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ INDEX  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    height: 45px;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1rem;
+    filter: opacity(85%);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+}
+
+.nav-logo {
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+.empty-nav-div {
+    width: 5%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.main-nav {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.small-nav a {
+    color: white;
+}
+
+.small-nav a:active {
+    color: white;
+}
+
+.main-page-div {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/pics/bg-7.png);
+    background-color: rgb(210, 210, 210) !important;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-page-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(120, 120, 120, 0.4);
+}
+
+.main-message {
+    width: 500px;
+    height: 500px;
+    font-size: 3.1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-weight: 800;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900 !important;
+}
+
+.parts, .divider {
+    width: 100%;
+    filter: opacity(85%);
+}
+
+.main-slider {
+    width: 100%;
+    height: 300%;
+    min-height: 600px;
+}
+
+@keyframes neonGlowText {
+    0% {
+        color: rgb(0, 0, 0, 0.9);
+        text-shadow: 0 0 15px rgba(255, 231, 95, 0.8);
+    }
+    25% {
+        color: rgb(0, 0, 0, 0.9);
+        text-shadow: 0 0 15px rgba(221, 108, 123, 0.8);
+    } 
+    50% {
+        color: rgb(0, 0, 0, 0.9);
+        text-shadow: 0 0 15px rgba(147, 246, 255, 0.8);
+    } 
+    75% {
+        color: rgb(0, 0, 0, 0.9);
+        text-shadow: 0 0 15px rgba(207, 255, 112, 0.8);
+    }
+    100% {
+        color: rgb(0, 0, 0, 0.9);
+        text-shadow: 0 0 15px rgba(115, 239, 255, 0.8);
+    }
+}
+
+@keyframes neonGlowDivider {
+    0% {
+        color: rgba(255, 231, 95, 1);
+        text-shadow: 0 0 15px rgba(255, 231, 95, 1);
+    }
+    25% {
+        color: rgba(221, 108, 123, 1);
+        text-shadow: 0 0 20px rgba(221, 108, 123, 1);
+    }
+    50% {
+        color: rgba(147, 246, 255, 1);
+        text-shadow: 0 0 15px rgba(147, 246, 255, 1);
+    }
+    75% {
+        color: rgba(207, 255, 112, 1);
+        text-shadow: 0 0 20px rgba(207, 255, 112, 1);
+    }
+    100% {
+        color: rgba(115, 239, 255, 1);
+        text-shadow: 0 0 20px rgba(115, 239, 255, 1);
+    }
+}
+
+.parts, .second-part {
+    animation: neonGlowText 35s infinite;
+}
+
+.divider {
+    animation: neonGlowDivider 35s infinite;
+}
